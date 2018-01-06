@@ -6,18 +6,7 @@ body {
     background-image: url(img/back_img.jpg);
 }
 
-.menu {
-	height:50px;
-	width:100%;
-	font-family: 'Dosis', sans-serif;
-    padding: 0;
-	margin:0;
-    list-style: none;
-    font-weight: 700;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-}
+
 
 .registerSteps {
 	font-family: 'Dosis', sans-serif;
@@ -29,26 +18,138 @@ li {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	display: inline;
 	display:flex;
 }
 
-header {
-	height: 50px;
-	margin-left: 12.5%;
-	width: 75%;
-    clear: both;
-    border-top: 1px solid #40474D;
-	border-bottom: 1px solid #40474D;
+@media screen and (min-width: 750px) {
+	header {
+		height: 50px;
+		margin-left: 12.5%;
+		width: 75%;
+		clear: both;
+		border-top: 1px solid #40474D;
+		border-bottom: 1px solid #40474D;
+		
+	}
+	
+
+	.link-block-menu {
+		height:100%;
+		width:100%;	
+		font-size: 13px;
+		margin:auto;
+		color: rgba(0,0,0,.8);
+		text-decoration: none;
+	}
+	
+	.menu {
+		height:50px;
+		width:100%;
+		font-family: 'Dosis', sans-serif;
+		padding: 0;
+		margin:0;
+		list-style: none;
+		font-weight: 700;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+	
+	.dropdown:before {
+		bottom: 100%;
+		left: 40%;					
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		border-bottom-color: #000;
+		border-width: 8px;				
+	}
+
+	.dropdown-1:before {
+		left: 33%;
+	}
+	
+	ul.menu > li.has-dropdown:hover > ul.dropdown {
+		display: block;
+		position: absolute;
+		left: 3%;
+		font-size: 10pt;
+		
+		width: 110px;
+		-webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+		box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+		top: 40px;
+		text-align: left;
+		background: #000;
+		padding: 15px;
+		border-radius: 5px;
+		transition: top 1s ease-out 0.5s;
+	}
+
+	ul.menu > li.has-dropdown:hover > ul.dropdown-1 {	
+		width: 150px;
+	}
 }
 
-.link-block-menu {
-	height:100%;
-	width:100%;	
-	font-size: 13px;
-	margin:auto;
-	color: rgba(0,0,0,.8);
-	text-decoration: none;
+@media screen and (max-width: 750px) {
+	.menu {
+		margin-left: 12.5%;
+		width: 75%;
+		font-family: 'Dosis', sans-serif;	
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+		align-items:flex-end;
+		border-top: 1px solid #40474D;
+		border-bottom: 1px solid #40474D;
+		
+	}
+	
+	.link-block-menu {
+		font-size: 15px;
+		color: rgba(0,0,0,.8);
+		text-decoration: none;
+	}
+	
+	.dropdown:before {
+		bottom: 70%;
+		left: -4%;					
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		border-bottom-color: #000;
+		border-width: 8px;				
+	}
+
+	.dropdown-1:before {
+		left: -4%;
+	}
+	
+	ul.menu > li.has-dropdown:hover > ul.dropdown {
+		display: block;
+		position: absolute;
+		left: 75px;
+		font-size: 10pt;
+		
+		width: 110px;
+		-webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+		box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+		text-align: left;
+		background: #000;
+		padding: 15px;
+		border-radius: 5px;
+		transition: top 1s ease-out 0.5s;
+	}
+
+	ul.menu > li.has-dropdown:hover > ul.dropdown-1 {	
+		width: 150px;
+	}
 }
 
 .link-block-menu:visited {
@@ -92,28 +193,19 @@ header {
 	color: rgba(0,0,0,.5);
 }
 
-.input-left {
-	float: left;
+@media screen and (min-width: 750px) {
+	.top {
+		margin-bottom: 10px;
+		display: flex;
+		justify-content:space-around;
+		align-items:center;
+		margin-left: 10%;
+		margin-right: 12.5%;
+	}
 }
 
-.authorization {
-	float: right;
-}
-
-.auth-form {
-	float: left;
-}
-
-.input-right {
-	margin-left: 5px;
-	float: left;
-}
-
-.remember-pass {
-	float: left;
-}
-
-.top {
+@media screen and (min-width: 1050px) {
+	.top {
 	margin-bottom: 10px;
 	display: flex;
 	justify-content:space-between;
@@ -122,6 +214,39 @@ header {
 	margin-right: 12.5%;
 }
 
+	.input-left {
+		float: left;
+	}
+
+	.authorization {
+		float: right;
+	}
+
+	.auth-form {
+		float: left;
+	}
+
+	.input-right {
+		margin-left: 5px;
+		float: left;
+	}
+
+	.remember-pass {
+		float: left;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.top {
+		margin-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+		align-items:center;
+		margin-left: 10%;
+		margin-right: 12.5%;
+	}
+}
 
 .dropdown {
 	display: none;
@@ -131,28 +256,6 @@ header {
 	position: relative;
 }
 
-ul.menu > li.has-dropdown:hover > ul.dropdown {
-    display: block;
-    position: absolute;
-	left: 3%;
-	font-size: 10pt;
-	
-	width: 110px;
-	-webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-    box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
-    top: 40px;
-    text-align: left;
-    background: #000;
-    padding: 15px;
-    border-radius: 5px;
-    transition: top 1s ease-out 0.5s;
-}
-
-ul.menu > li.has-dropdown:hover > ul.dropdown-1 {	
-	width: 150px;
-}
-
 ul.menu > li.has-dropdown > ul.dropdown > li > a{	
     color: rgb(123,123,123);
 	text-decoration: none;
@@ -160,22 +263,6 @@ ul.menu > li.has-dropdown > ul.dropdown > li > a{
 
 ul.menu > li.has-dropdown > ul.dropdown > li > a:hover{	
     color: rgb(200,200,200);
-}
-
-.dropdown:before {
-	bottom: 100%;
-	left: 40%;					
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	border-bottom-color: #000;
-	border-width: 8px;				
-}
-
-.dropdown-1:before {
-	left: 33%;
 }
 
 #enter:hover {
@@ -228,20 +315,41 @@ ul.menu > li.has-dropdown > ul.dropdown > li > a:hover{
   animation-name: fadeInUpMenu;
 }
 
-.head-title {
-	font-family: 'Dosis', sans-serif;
-	margin-right: 15.5%;
-	margin-left: 15.5%;
-    border-bottom: 1px solid #b1b1b1;
-	height: 40px;
+@media screen and (min-width: 750px) {
+	.head-title {
+		font-family: 'Dosis', sans-serif;
+		margin-right: 15.5%;
+		margin-left: 15.5%;
+		border-bottom: 1px solid #b1b1b1;
+		height: 40px;
+	}
+	
+	.middle {
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+		overflow: hidden;
+	}
 }
 
-.middle {
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
-    overflow: hidden;
+@media screen and (max-width: 750px) {
+	.head-title {
+		font-family: 'Dosis', sans-serif;
+		margin-right: 15.5%;
+		margin-left: 15.5%;
+		border-bottom: 1px solid #b1b1b1;
+	}
+	
+	.middle {
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+		align-items:center;
+		overflow: hidden;
+	}
 }
+
+
 
 .head-title > .middle > h1 {	
     font-size: 21px;
@@ -258,17 +366,13 @@ ul.menu > li.has-dropdown > ul.dropdown > li > a:hover{
 }
 
 .registerSteps {
-	margin-left: 35%;
+	margin-left: 25%;
 }
 
 .label {
     text-align: left;
     color: #2b3137;
     line-height: 40px;
-}
-
-.field {
-    position: relative;
 }
 
 .but {
@@ -279,28 +383,66 @@ ul.menu > li.has-dropdown > ul.dropdown > li > a:hover{
 	border-color: red;
 }
 
-.field-fname > input:invalid:not(:placeholder-shown) + span::before{
-	content : "Укажите ваше имя (начиная с заглавной буквы).";
-    position: absolute;
-    padding: 5px;
-    top: -10px;
-	color: #5f656c;
-    font-size: 15px;
-    font-style: normal;
+@media screen and (min-width: 750px) {
+	.field {
+		position: relative;
+	}
+
+	.field-fname > input:invalid:not(:placeholder-shown) + span::before{
+		content : "Укажите ваше имя (начиная с заглавной буквы).";
+		position: absolute;
+		padding: 5px;
+		top: -10px;
+		color: #5f656c;
+		font-size: 15px;
+		font-style: normal;
+	}
+
+	.field-fname > input:invalid:not(:placeholder-shown) + span::after{
+		font-family: 'Courgette', cursive;
+		content : "Цифры и заглавные буквы не в начале строки недопустимы";
+		position: absolute;
+		padding: 5px;
+		clear: both;
+		top: 4px;
+		color: #5f656c;
+		font-size: 13px;
+		line-height: 16px;
+		font-style: italic;
+	}
 }
 
-.field-fname > input:invalid:not(:placeholder-shown) + span::after{
-	font-family: 'Courgette', cursive;
-	content : "Цифры и заглавные буквы не в начале строки недопустимы";
-    position: absolute;
-	padding: 5px;
-    clear: both;
-	top: 4px;
-    color: #5f656c;
-    font-size: 13px;
-    line-height: 16px;
-    font-style: italic;
+@media screen and (max-width: 750px) {	
+	.field {
+		position: relative;			
+		display: flex;
+		flex-direction: column;
+		justify-content:space-around;
+		align-items:flex-start;		
+	}
+	
+	.field-fname > input:invalid:not(:placeholder-shown) + span::before{
+		content : "Укажите ваше имя (начиная с заглавной буквы).";
+		position: a;
+		width: 25%;
+		color: #5f656c;
+		font-size: 15px;
+		font-style: normal;
+	}
+
+	.field-fname > input:invalid:not(:placeholder-shown) + span::after{
+		font-family: 'Courgette', cursive;
+		content : "Цифры и заглавные буквы не в начале строки недопустимы";	
+		width: 25%;
+		top: 20px;
+		color: #5f656c;
+		font-size: 13px;
+		line-height: 16px;
+		font-style: italic;
+	}
 }
+
+
 
 .field-sname > input:invalid:not(:placeholder-shown) + span::before{
 	content : "Укажите вашу фамилию (начиная с заглавной буквы).";
@@ -331,18 +473,36 @@ ul.menu > li.has-dropdown > ul.dropdown > li > a:hover{
 	width: 200px;
 }
 
-footer {
-	margin-left: 9.5%;
-	margin-right:9.5%;
-	text-align:center;
-    height: 166px;
-    margin-top: 40px;
-    background: url(img/footer_right_s.jpg) no-repeat scroll right bottom, url(img/footer_left_s.jpg) no-repeat scroll left bottom, 
-				url(img/footer_bg_s.jpg) repeat scroll right bottom transparent;
-	display: flex;
-	flex-direction: column;
-	justify-content:flex-start;
-	align-items:center;
+@media screen and (min-width: 750px) {
+	footer {
+		margin-left: 9.5%;
+		margin-right:9.5%;
+		text-align:center;
+		height: 166px;
+		margin-top: 40px;
+		background: url(img/footer_right_s.jpg) no-repeat scroll right bottom, url(img/footer_left_s.jpg) no-repeat scroll left bottom, 
+					url(img/footer_bg_s.jpg) repeat scroll right bottom transparent;
+		display: flex;
+		flex-direction: column;
+		justify-content:flex-start;
+		align-items:center;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	footer {
+		margin-left: 9.5%;
+		margin-right:9.5%;
+		text-align:center;
+		height: 166px;
+		margin-top: 40px;
+		background: url(img/footer_right_s.jpg) no-repeat scroll right bottom, url(img/footer_left_s.jpg) no-repeat scroll left bottom, 
+					url(img/footer_bg_s.jpg) repeat scroll right bottom transparent;
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items:center;
+	}
 }
 
 .logo-footer {
